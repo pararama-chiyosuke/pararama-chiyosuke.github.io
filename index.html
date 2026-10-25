@@ -20,6 +20,34 @@
 .about-fold .fold-arrow { font-size:.85rem; }
 .about-fold[open] .fold-arrow { transform:rotate(180deg); }
 .about-fold-content { padding-top:12px; }
+
+/* スマートフォンのメニューを2列×2段に整列 */
+@media (max-width: 600px) {
+  header nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px !important;
+    width: min(100%, 440px);
+    margin: 20px auto 0 !important;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  header nav a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 !important;
+    text-align: center;
+    white-space: nowrap;
+    font-size: clamp(13px, 3.7vw, 17px);
+    padding: 12px 5px;
+  }
+  #try { margin-top: 0; }
+  #try .about-fold > summary { font-size: 1.1rem; }
+}
 </style></head><body>
 <header><div class="top"><span class="lamp">●</span> PARARAMA'S RETRO GAME SHOP <span class="lamp">●</span></div><h1>ふわぁ ゲーム倉庫</h1><p>AIと一緒に作った、小さなゲームとアプリの配布場。</p><nav><a href="#try">お試し所</a><a href="#games">ゲーム・アプリ</a><a href="#about">作者について</a><a href="#contact">不具合報告</a></nav></header>
 <main><section class="panel" id="try"><details class="about-fold"><summary>▣ お試し所 <span aria-hidden="true" class="fold-arrow">▼</span></summary><div class="about-fold-content"><p>GB・GBC・GBAのゲーム3本を、ブラウザでそのままお試しできます！</p><p>ダウンロード不要。スマホでもパソコンでも遊べます。USBゲームパッドにも対応しています（機種によって動作が異なります）。</p><p><a class="button download" href="https://pararama-chiyosuke.github.io/fuwaa-emulator-test/index.html">🎮 お試し所へ行く ↗</a></p></div></details></section><section id="games"><h2>▣ ゲーム・アプリ <small>4 TITLES</small></h2><div class="shelf">
